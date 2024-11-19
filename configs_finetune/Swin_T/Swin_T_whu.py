@@ -75,6 +75,7 @@ val_dataloader = dict(
         data_list=test_data_list,
     )
 )
+test_dataloader = val_dataloader
 
 """ ************************** schedule **************************"""
 optim_wrapper = dict(
