@@ -32,8 +32,7 @@ if __name__ == '__main__':
     args = parse_args()
     folder_path = args.input_dir
     out_path = args.output_dir
-    # os.system(f'sudo rm -rf {out_path}')
-    os.system(f'mkdir {out_path}')
+    os.makedirs(out_path, exist_ok=True)
 
     filenames = [filename for filename in os.listdir(folder_path) if
                  filename.endswith('.png') or filename.endswith('.jpg') or filename.endswith('.tif')]

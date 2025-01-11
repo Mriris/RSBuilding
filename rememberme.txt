@@ -1,0 +1,36 @@
+python /home/iris/PycharmProjects/RSBuilding/tools/data_process/WHU_Building_Dataset/generate_data_list.py \
+--input-img-dir="/home/iris/Datasets/WHU/test/image" \
+--input-mask-dir="/home/iris/Datasets/WHU/test/label" \
+--output-txt-dir="/home/iris/Datasets/WHU/test.txt"
+
+python /home/iris/PycharmProjects/RSBuilding/tools/data_process/WHU_Building_Dataset/generate_data_list.py \
+--input-img-dir="/home/iris/Datasets/mua2/test/image" \
+--input-mask-dir="/home/iris/Datasets/mua2/test/label" \
+--output-txt-dir="/home/iris/Datasets/mua2/test.txt"
+
+python /home/iris/PycharmProjects/RSBuilding/tools/test.py \
+/home/iris/PycharmProjects/RSBuilding/tools/data_process/WHU_Building_Dataset/Swin_T_config.py \
+/home/iris/PycharmProjects/RSBuilding/pretrain_ckpt/Swin_T.pth
+
+
+python /home/iris/PycharmProjects/RSBuilding/tools/test.py \
+/home/iris/PycharmProjects/RSBuilding/tools/data_process/WHU_Building_Dataset/Swin_T_config_2.py \
+/home/iris/PycharmProjects/RSBuilding/pretrain_ckpt/Swin_T.pth
+
+
+
+
+
+python /home/iris/PycharmProjects/RSBuilding/tools/data_process/Levir_CD_Dataset/stride_crop.py \
+--input-dir="/home/iris/Datasets/mua4/origin/label" \
+--output-dir="/home/iris/Datasets/mua4/test/label"
+
+python /home/iris/PycharmProjects/RSBuilding/tools/data_process/Levir_CD_Dataset/generate_data_list.py \
+--input-img-A-dir="/home/iris/Datasets/mua4/test/A" \
+--input-img-B-dir="/home/iris/Datasets/mua4/test/B" \
+--input-mask-dir="/home/iris/Datasets/mua4/test/label" \
+--output-txt-dir="/home/iris/Datasets/mua4/test/test.txt"
+
+python /home/iris/PycharmProjects/RSBuilding/tools/test.py \
+/home/iris/PycharmProjects/RSBuilding/tools/data_process/WHU_Building_Dataset/Swin_T_config_4.py \
+/home/iris/PycharmProjects/RSBuilding/pretrain_ckpt/Swin_T.pth

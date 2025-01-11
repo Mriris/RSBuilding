@@ -1,1 +1,1 @@
-# $data_dir/whubuilding/train.txt
+/home/iris/Datasets/WHU/train.txt

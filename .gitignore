@@ -122,3 +122,6 @@ opencd/.mim
 wandb/
 /pretrain
 push.sh
+/pretrain_ckpt/
+/result/
+/saved_models/
